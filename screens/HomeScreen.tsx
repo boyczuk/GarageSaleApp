@@ -12,15 +12,15 @@ type Props = {
 
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
   const garageSales = [
-    { id: 1, title: 'Garage Sale 1', latitude: 37.78825, longitude: -122.4324 },
-    { id: 2, title: 'Garage Sale 2', latitude: 37.75825, longitude: -122.4524 },
+    { id: 1, title: 'Garage Sale 1', latitude: 43.6465, longitude: -79.4173 },
+    { id: 2, title: 'Garage Sale 2', latitude: 43.6460, longitude: -79.4200 },
   ];
 
   return (
     <View style={styles.container}>
       <MapView style={styles.map} initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
+        latitude: 43.6465,
+        longitude: -79.4173,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       }}>
@@ -32,7 +32,6 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
           />
         ))}
       </MapView>
-      <Button title="Add Garage Sale" onPress={() => navigation.navigate('AddSale')} />
     </View>
   );
 };
